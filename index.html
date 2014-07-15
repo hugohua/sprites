@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8" />
+		<title>Sprites</title>
+		<meta name="Copyright" content="hugohua" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+	</head>
+	<body>
+        
+        <!-- 宽度:<input type="text" id="js_canvas_width">
+        高度:<input type="text" id="js_canvas_height"> -->
+
+        <div id="J_container" class="container">
+            
+        </div>
+
+        <div class="action">
+            <input class="action_inp" id="J_path" type="text" value="E:\test123\" placeholder="请输入文件夹路径" />
+            <p>
+                宽：<input class="action_inp" id="J_width" type="number" value="400" placeholder="请输入文件夹路径" />
+                高：<input class="action_inp" id="J_height" type="number" value="400" placeholder="请输入文件夹路径" />
+            </p>
+            <button class="action_btn" id="J_editSize">修改宽高</button>
+            <button class="action_btn" id="J_readFiles">生成图片</button><br>
+            <!--<button class="action_btn" id="J_export">导出png & css</button>-->
+
+
+        </div>
+        
+        <!-- container -->
+        <script src="js/libs/jquery-2.0.2.min.js"></script>
+        <script src="js/libs/kinetic-v4.5.3.min.js"></script>
+        <script src="js/libs/shortcut.js"></script>
+        <script src="js/libs/packer.js"></script>
+        <script src="js/libs/packer.growing.js"></script>
+        <script src="js/func.js"></script>
+        <script src="js/canvas.js"></script>
+        <script src="js/text.js"></script>
+	</body>
+</html>

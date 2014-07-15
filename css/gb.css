@@ -1,0 +1,47 @@
+
+.mod_container{padding: 10px ;}
+
+.search_box{width: 850px;}
+
+.cc_radio .radio.inline, 
+.cc_radio .checkbox.inline{padding-top: 0;}
+
+.cc_item .action{margin-top: 5px;}
+
+/*类名表单*/
+.cc_mod_small{margin-top: 10px;}
+.cc_mod_small .control-label{width: 60px;}
+.cc_mod_small .controls{margin-left: 60px;}
+
+.cc_mod_middle{margin-top: 10px; position: relative;}
+.cc_mod_middle .control-label{width: 92px;}
+.cc_mod_middle .controls{margin-left: 92px;}
+.cc_mod_middle .cc_pinpai_pop{left: 92px;}
+
+/*品牌弹出层*/
+.cc_pinpai{position: relative;}
+	.cc_pinpai_pop{position: absolute; top: 29px; left: 58px; width: 400px; height: 285px; background: #fff; border: 1px solid #ddd; padding: 3px; border-radius: 5px;}
+	.cc_pinpai_pop .pagination{margin: 10px 0 0 0;}
+	.cc_pinpai_pop .btn{position: relative; top: -30px; left: 10px;}
+
+	.cc_pinpai_select{margin: 5px 0;}
+	.cc_pinpai_select span{padding-right: 5px;}
+
+.cc_content .btn-group{margin-left: 20px;}
+.cc_sub_con{margin-left: 20px;}
+div.cc_sub_con{position: relative;}
+
+/*box*/
+.cc_mod_box{width: 400px; margin: 0 20px 20px 0; float: left; border: 1px solid rgba(0, 0, 0, 0.3); border-radius:3px;padding:0 10px; background: #fff}
+	.cc_mod_box_hd{  height: 35px; line-height: 35px; border-bottom: 1px solid rgb(238, 238, 238);}
+	.cc_mod_box_hd h4{font-size: 14px; margin: 0 20px 0 0;display: inline-block; *display: inline; *zoom: 1; vertical-align: middle;}
+	.cc_mod_box_hd span{display: inline-block; *display: inline; *zoom: 1; vertical-align: middle;}
+
+	.cc_mod_box_bd{padding: 10px 0;}
+
+.modal_icon{position: relative;}
+.modal_icon i{position: absolute; width:46px;height:46px; background-image: url(../img/ico_prompt.png); background-repeat: no-repeat;}
+.modal_icon i.icon_succ{ background-position: 0 0;}
+.modal_icon i.icon_error{ background-position: 0 -50px;}
+.modal_icon i.icon_warn{ background-position: 0 -100px;}
+.modal_icon .modal_txt{margin-left: 65px;}
