@@ -8,7 +8,8 @@ var el = {
     $pathInp : $('#J_path'),
     $width : $('#J_width'),
     $height : $('#J_height'),
-    $editSizeBtn : $('#J_editSize')
+    $editSizeBtn : $('#J_editSize'),
+    $mobile:$('#J_mobile')
 };
 
 var json = '{"attrs":{"width":1600,"height":5600},"className":"Stage"}',
@@ -185,22 +186,33 @@ var Events = {
             var path = el.$pathInp.val(),
                 dirlist = fs.readdirSync(path), //同步读取文件内容
                 dirImg = checkImg(dirlist),
+                isMobile = el.$mobile.prop('checked'),
                 cssName = [],
+                bgSize = '',
                 cssStr = '';
             console.log('读取中');
+            console.log(isMobile);
+            
             canvas.clear();
             getImagesArr(path,dirImg,function(images){
                 images = sortImage(images);
                 images.forEach(function(item){
                     if(item.fit){
+                        var width = isMobile ? item.w/2 : item.w;
+                        var heigth = isMobile ? item.h/2 : item.h;
+                        var x = isMobile ? item.fit.x/2 : item.fit.x;
+                        var y = isMobile ? item.fit.y/2 : item.fit.y;
                         canvas.drawImage(item.url,item.fit.x, item.fit.y);
-                        cssStr += "." + item.cssname + "{width:"+ item.w +"px; height:"+ item.h +"px; background-position: -"+ item.fit.x +"px -"+ item.fit.y +"px}\n";
+                        cssStr += "." + item.cssname + "{width:"+ width +"px; height:"+ heigth +"px; background-position: -"+ x +"px -"+ y +"px}\n";
                         cssName.push( "." + item.cssname);
                     }
                 });//forEach
                 console.log(cssStr);
-
-                cssName = cssName.join(',') + '{background-image: url("sprites.png"); background-repeat: no-repeat}';
+                if(isMobile){
+                    var size = getSize();
+                    bgSize = ';background-size:' + size.width/2 + 'px ' + size.height/2 + 'px;'
+                }
+                cssName = cssName.join(',') + '{background-image: url("sprites.png"); background-repeat: no-repeat'+  bgSize +'}';
                 cssName += "\n" + cssStr;
                 cssName = replaceAll(cssName,'!',' ');
                 cssName = replaceAll(cssName,'@',':');

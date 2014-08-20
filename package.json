@@ -1,0 +1,11 @@
+{
+  "name": "sprites",
+  "description": "css sprites",
+  "version": "0.1",
+  "main": "index.html",
+  "window": {
+    "toolbar": false,
+    "width": 800,
+    "height": 600
+  }
+}
